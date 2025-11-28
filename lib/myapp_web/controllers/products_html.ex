@@ -6,10 +6,6 @@ defmodule MyappWeb.ProductsHTML do
   """
   use MyappWeb, :html
 
-  # embed_templates "products_html/*"
-  def index (assigns) do
-    ~H"""
-    <h1>Products Page</h1>
-     """
-  end
+  embed_templates "products_html/*"
+
 end
