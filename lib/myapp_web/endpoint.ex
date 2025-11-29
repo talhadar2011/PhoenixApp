@@ -50,5 +50,14 @@ defmodule MyappWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
+  plug :promo_code
   plug MyappWeb.Router
+
+  def promo_code(%Plug.Conn{:params=>%{"promo"=>"code"}}=conn, _opts) do
+
+    assign(conn, :promo,true)
+  end
+   def promo_code(%Plug.Conn{}=conn, _opts) do
+    assign(conn, :promo,false)
+  end
 end
