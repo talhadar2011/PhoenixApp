@@ -1,9 +1,9 @@
 defmodule MyappWeb.ProductsController do
   use MyappWeb, :controller
-  def products(conn, _params) do
-    render(conn, :products)
+  def index(conn, _params) do
+    render(conn, :index)
   end
-  def productsWithID(conn,%{"id"=>id} ) do
-    render(conn, :productWithId,id: id)
+  def show(conn,%{"id"=>id} ) do
+    render(conn, :show,id: id)
   end
 end
