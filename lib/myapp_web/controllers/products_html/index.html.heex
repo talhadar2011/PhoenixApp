@@ -1,14 +1,16 @@
-<Layouts.app flash={@flash}>
+ <Layouts.app flash={@flash}>
   <h1>Products Index</h1>
 
   <section>
     <h2>All Products</h2>
     <ul>
-        <li :for={product <- @products}>
-           {product.name}   {product.console}
-        </li>
-      %>
+      <li :for={product <- @products}>
+        {product.name} | Console: {product.console}
+        <.link navigate={~p"/products/#{product.id}"}>
+          View Details
+        </.link>
+      </li>
     </ul>
   </section>
 
-</Layouts.app>
+</Layouts.app> 
