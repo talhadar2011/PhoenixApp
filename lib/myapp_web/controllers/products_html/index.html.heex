@@ -1,3 +1,18 @@
 <Layouts.app flash={@flash}>
- <h1>Product </h1>
+  <h1>Products Index</h1>
+
+  <section>
+    <h2>All Products</h2>
+    <ul>
+      <%= for product <- @products do %>
+        <li>
+          <%# Now you can safely access the 'name' on the singular 'product' struct %>
+          <%= product.name %> (<%= product.console %>)
+          <%# Optional: Add a link to the show page %>
+          <%= link "View Details", to: ~p"/products/#{product.id}" %>
+        </li>
+      <% end %>
+    </ul>
+  </section>
+
 </Layouts.app>
