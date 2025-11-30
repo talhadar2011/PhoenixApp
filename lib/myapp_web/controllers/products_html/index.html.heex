@@ -4,14 +4,10 @@
   <section>
     <h2>All Products</h2>
     <ul>
-      <%= for product <- @products do %>
-        <li>
-          <%# Now you can safely access the 'name' on the singular 'product' struct %>
-          <%= product.name %> (<%= product.console %>)
-          <%# Optional: Add a link to the show page %>
-          <%= link "View Details", to: ~p"/products/#{product.id}" %>
+        <li :for={product <- @products}>
+           {product.name}   {product.console}
         </li>
-      <% end %>
+      %>
     </ul>
   </section>
 
