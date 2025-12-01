@@ -1,4 +1,4 @@
-defmodule Myapp.Product do
+defmodule Myapp.Products.Product do
   use Ecto.Schema
   import Ecto.Changeset
 

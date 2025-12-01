@@ -1,2 +1,2 @@
-alias Myapp.{Repo, Product}
+alias Myapp.{Repo, Products.Product}
 import Ecto.Query

@@ -1,16 +1,16 @@
 defmodule MyappWeb.ProductsController do
   use MyappWeb, :controller
-  alias Myapp.{Repo, Product}
+  alias Myapp.{Repo, Products.Product}
 
   def index(conn, _params) do
-   products = Repo.all(Product)
+   products = Myapp.Products.list_products()
     conn
     |> assign(:products, products)
     |> render(:index)
   end
 
   def show(conn,%{"id"=>id} ) do
-    product=Repo.get(Product, id)
+    product=Myapp.Products.get_product_by_Id(id)
     conn
     |> assign(:product, product)
     |>  render(:show,id: id)
