@@ -29,7 +29,7 @@ defmodule MyappWeb.Router do
   # Other scopes may use custom stacks.
   scope "/api", MyappWeb do
     pipe_through :api
-    get "/ping", DataController, :ping
+    get "/data", DataController, :index
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
