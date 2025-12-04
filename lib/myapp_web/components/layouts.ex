@@ -121,13 +121,13 @@ defmodule MyappWeb.Layouts do
               </a>
 
 
-
+              <a href="/doctors">
               <li class="py-1 group   text-white">
                 Doctor
                 <hr class="w-3/5 m-auto border-none h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300" />
 
               </li>
-
+              </a>
               <a href="/about">
               <li class="py-1 group  text-white">
                 About
