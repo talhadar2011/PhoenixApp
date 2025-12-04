@@ -22,7 +22,8 @@ defmodule MyappWeb.Router do
      get "/", PageController, :home
      get "/products", ProductsController, :index
      get "/products/:id", ProductsController, :show
-
+     get "/about", PageController, :about
+     get "/contact", PageController, :contact
     #resource "/products", ProductsController, only: [:products, :productsWithID]
   end
 
