@@ -8,7 +8,7 @@ defmodule MyappWeb.Router do
     plug :put_root_layout, html: {MyappWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-    plug MyappWeb.Plugs.SetConsole ,"PC"
+    plug MyappWeb.Plugs.SetConsole, "PC"
   end
 
   pipeline :api do
@@ -18,28 +18,27 @@ defmodule MyappWeb.Router do
   scope "/", MyappWeb do
     pipe_through :browser
 
+    get "/", PageController, :home
 
-     get "/", PageController, :home
-     get "/products", ProductsController, :index
-     get "/products/:id", ProductsController, :show
-     get "/about", PageController, :about
-     get "/contact", PageController, :contact
-    #resource "/products", ProductsController, only: [:products, :productsWithID]
+    get "/about", PageController, :about
+    get "/contact", PageController, :contact
+
+    # Doctor LiveView Routes
+    live "/doctors", DoctorLive.Index, :index
+    live "/doctors/new", DoctorLive.Form, :new
+    live "/doctors/:id/edit", DoctorLive.Form, :edit
+
+    live "/doctors/:id", DoctorLive.Show, :show
+    live "/doctors/:id/show/edit", DoctorLive.Show, :edit
   end
 
-  # Other scopes may use custom stacks.
   scope "/api", MyappWeb do
     pipe_through :api
+
     get "/data", DataController, :index
   end
 
-  # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:myapp, :dev_routes) do
-    # If you want to use the LiveDashboard in production, you should put
-    # it behind authentication and allow only admins to access it.
-    # If your application does not have an admins-only section yet,
-    # you can use Plug.BasicAuth to set up some basic authentication
-    # as long as you are also using SSL (which you should anyway).
     import Phoenix.LiveDashboard.Router
 
     scope "/dev" do

@@ -66,9 +66,8 @@ defmodule MyappWeb.Layouts do
           <a href="/">
            <img
             fetchPriority="high"
-            src={~p"/images/logo.svg"}
+            src={~p"/images/newLogoWhite.webp"}
             alt="logo"
-             width="36"
             class="h-14 cursor-pointer"
           />
           </a>
