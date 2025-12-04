@@ -1,0 +1,81 @@
+<Layouts.app flash={@flash}>
+   <section class="min-h-[calc(100vh-88px)] bg-gradient-to-b from-[#eef7f4] to-[#d9eee6] py-16 px-6 flex flex-col items-center">
+      <div
+        class="text-center max-w-3xl mb-12"
+      >
+        <h1 class="text-4xl font-extrabold text-[#2f5d50] mb-4">
+          About <span class="text-[#3f6b60]">Healthbook</span>
+        </h1>
+        <p class="text-gray-600 text-lg">
+          Healthbook is your trusted companion for accessible, transparent, and
+          efficient healthcare. Our mission is to connect patients with verified
+          professionals and simplify the medical journey.
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 g-10 max-w-6xl items-center mb-12"
+      >
+        <div class="space-y-6">
+          <h1 class="text-4xl font-extrabold text-[#2f5d50] mb-4">
+            Our Mission
+          </h1>
+          <p class="text-gray-700 leading-relaxed">
+            We aim to revolutionize healthcare accessibility through innovation,
+            empathy, and technology. From booking appointments to finding
+            trusted doctors, Healthbook ensures every step of your care is
+            simple and reliable.
+          </p>
+          <ul class="list-disc list-inside text-gray-600 space-y-2">
+            <li>Seamless doctor-patient connection</li>
+            <li>Transparency in healthcare services</li>
+            <li>Secure and user-friendly experience</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl p-4 shadow-2xl mt-10">
+          <img src={~p"/images/newLogo.webp"} alt="Logo" />
+        </div>
+      </div>
+      <div
+        class=" max-w-6xl text-center mb-12"
+      >
+        <h1 class="text-4xl  font-extrabold text-[#2f5d50] mb-12">
+          Our Core Values
+        </h1>
+        <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center">
+            <.icon class="text-[#3f6b60] w-10 h-10 mb-4" name="hero-heart-plus" class="size-5 shrink-0" />
+              <h3 class="text-xl font-semibold text-[#2f5d50] mb-2">Care First</h3>
+              <p class="text-gray-600 text-sm">We put patient well-being at the heart of everything we do.</p>
+          </div>
+        <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center">
+            <.icon class="text-[#3f6b60] w-10 h-10 mb-4" name="hero-user" class="size-5 shrink-0" />
+              <h3 class="text-xl font-semibold text-[#2f5d50] mb-2">Collaboration</h3>
+              <p class="text-gray-600 text-sm">We build meaningful relationships between doctors and patients.</p>
+          </div>
+           <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center">
+            <.icon class="text-[#3f6b60] w-10 h-10 mb-4" name="hero-shield" class="size-5 shrink-0" />
+              <h3 class="text-xl font-semibold text-[#2f5d50] mb-2">Security</h3>
+              <p class="text-gray-600 text-sm">Your health data and privacy are always protected.</p>
+          </div>
+           <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center">
+             <.icon class="text-[#3f6b60] w-10 h-10 mb-4" name="hero-star" class="size-5 shrink-0" />
+
+              <h3 class="text-xl font-semibold text-[#2f5d50] mb-2">Excellence</h3>
+              <p class="text-gray-600 text-sm">We constantly improve to provide the best possible healthcare experience.</p>
+          </div>
+
+        </div>
+      </div>
+       <div
+        class="text-center max-w-3xl mb-12 space-y-4"
+      >
+        <h1 class="text-2xl font-extrabold text-[#2f5d50] mb-4">
+          Joint HealthBook Today
+        </h1>
+        <p class="text-gray-600 text-lg">
+          Empower your healthcare journey with the tools and connections that matter most.
+        </p>
+        <button class="bg-[#2f5d50] rounded-xl shadow-md text-white p-4 hover:bg-[#4a8373] cursor-pointer"> Get in Touch</button>
+      </div>
+    </section>
+</Layouts.app>

@@ -63,15 +63,16 @@ defmodule MyappWeb.Layouts do
     </header> --%>
      <header class=" border-gray-200 bg-[#355b50] sticky top-0  z-100">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-
-          <img
-            href="/"
+          <a href="/">
+           <img
             fetchPriority="high"
             src={~p"/images/logo.svg"}
             alt="logo"
              width="36"
             class="h-14 cursor-pointer"
           />
+          </a>
+
 
 
           <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -112,33 +113,39 @@ defmodule MyappWeb.Layouts do
           id="navbar-user"
         >
           <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-[#8bada0] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent ">
-
+              <a href="/">
               <li class="py-1 group  text-white ">
                 Home
                  <hr class="w-3/5 m-auto border-none h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300" />
 
               </li>
+              </a>
+
 
 
               <li class="py-1 group   text-white">
                 Doctor
-                  <hr class="w-3/5 m-auto border-none h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300" />
+                <hr class="w-3/5 m-auto border-none h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300" />
 
               </li>
 
-
+              <a href="/about">
               <li class="py-1 group  text-white">
                 About
                 <hr class="w-3/5 m-auto border-none h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300" />
 
               </li>
+              </a>
 
 
-              <li class="py-1 group  text-white">
+              <a href="/contact">
+                <li class="py-1 group  text-white">
                 Contact
                 <hr class="w-3/5 m-auto border-none h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300" />
 
               </li>
+              </a>
+
           </ul>
         </div>
       </div>

@@ -81,32 +81,4 @@ if (process.env.NODE_ENV === "development") {
     window.liveReloader = reloader
   })
 }
-let Hooks = {}
 
-Hooks.Motion = {
-  mounted() {
-    const el = this.el
-    const data = el.dataset
-
-    // Initial state
-    if (data.initialOpacity) el.style.opacity = data.initialOpacity
-    if (data.initialX) el.style.transform = `translateX(${data.initialX}px)`
-    if (data.initialY) el.style.transform = `translateY(${data.initialY}px)`
-
-    // Animate on next frame
-    requestAnimationFrame(() => {
-      el.style.transition = `all ${data.duration || 0.5}s ease-out`
-      el.style.opacity = data.animateOpacity || 1
-
-      const x = data.animateX || 0
-      const y = data.animateY || 0
-      el.style.transform = `translate(${x}px, ${y}px)`
-    })
-  }
-}
-
-// let liveSocket = new LiveSocket("/live", Socket, {
-//   hooks: Hooks
-// })
-
-liveSocket.connect()
